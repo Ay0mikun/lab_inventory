@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'auth_app',
     'podrequest',
+    'password_reset',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,14 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT='/static/'
 LOGIN_URL = '/auth_app/user_login'
+
+
+#Email configuration for Application
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.office365.com'
+EMAIL_HOST_USER = 'ayo@docsigners.com'
+EMAIL_HOST_PASSWORD = 'Ay0infiniti1'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+# This must be a valid email address or else you get SMTPDataError
+DEFAULT_FROM_EMAIL = 'ayo@docsigners.com'
